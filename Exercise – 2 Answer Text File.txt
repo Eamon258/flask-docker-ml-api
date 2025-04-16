@@ -1,0 +1,12 @@
+Exercise – 2 Answer Text File
+Question 1: A brief (2–3 sentence) explanation of each component in your setup (e.g., what app.py does, why the Dockerfile is needed, and how containerization improves reproducibility).
+Answer: The app.py file contains the Flask API logic, defining routes like '/predict', processing inputs, and returning predictions using a regression model. The Dockerfile defines the environment and installation steps needed to containerize the app, ensuring it runs consistently across different systems. Containerization improves reproducibility by bundling the app and its dependency into a portable container that can run consistently anywhere, regardless of the underlying system.
+
+Question 2: Q1.2
+Answer: Since "estimated_ATE": -9.10572148400987, the estimated Average Treatment Effect (ATE) is approximately -9.11. This means that the treatment is expected to decrease the outcome variable by 9.11 units on average. The p-value associated with the treatment effect (ATE) given as "p_value_of_ATE": 0.0003633014763592135, so the p-value is 0.00036, which is much smaller than the typical significance level of 0.05, this suggests that the estimated ATE is statistically significant. Thus, we can conclude that the treatment has a statistically significant negative effect on the outcome variable, with an average reduction of approximately 9.11 units.
+
+Question 3: Q1.3
+Answer: Under these assumptions: random assignment, no confounding, Stable Unit Treatment Value Assumption (SUTVA), and additivity of treatment effects, the estimated ATE can be interpreted causally. This means the observed difference in outcomes between treated and untreated individuals can be attributed to the treatment itself, rather than to other factors. If any of these assumptions are violated, the estimated ATE may not represent a causal effect.
+
+Question 4: Q2.3
+Answer: The API Response to this request curl "http://localhost:5000/predict?w=1&x=20" are: "prediction": 117.15789954894551, "w": 1.0, "x": 20.0, which means when W=1 (corporation participated in the carbon offset program) and X=20 (corporation spent $20,000 on sustainability initiatives), the predicted engagement score Y hat is 117.15789954894551, approximately 117.16.
